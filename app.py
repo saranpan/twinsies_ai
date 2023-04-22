@@ -73,6 +73,7 @@ if selected == 'Predict':
             top3_person = list(infer_dct.keys())[:3]
             top3_diff = list(infer_dct.values())[:3]
             st.text(top3_person)
+            st.text(top3_person)
             st.text(os.listdir("database"))
             st.text(os.listdir("database/cardi b"))
             image = Image.open("database/cardi b/2.jpg")    
