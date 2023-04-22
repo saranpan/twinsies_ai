@@ -66,7 +66,7 @@ if selected == 'Predict':
                 dist = torch.linalg.vector_norm(diff,dim=1)
                 dist = torch.mean(dist)
                 infer_dct.update({k : dist.item()})
-                st.write(infer_dct)
+                st.write(dist.item())
 
             # Ascending by degree of difference 
             infer_dct = dict(sorted(infer_dct.items(), key=lambda item: item[1]))
