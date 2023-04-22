@@ -14,6 +14,7 @@ import os
 with open('emb_database/image_tensor.pkl', 'rb') as fp:
     img_database = pickle.load(fp)
 
+st.write(img_database)
 # Seuup some stuffs including transforms, and models
 tensor_to_img = T.ToPILImage()
 img_to_tensor = T.ToTensor() # เกบไว้ตอนเชค destination path
