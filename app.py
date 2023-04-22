@@ -59,7 +59,7 @@ if selected == 'Predict':
         if face_prob is None: #None if the image is less than threshold
             st.error("No face were detected")
             st.stop()
-            
+        st.text(face_prob)
         with st.spinner('Comparing your face with other celebrity faces ...'): 
             for k, v in img_database.items():
                 diff = test_img_tensor - v
