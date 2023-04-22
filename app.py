@@ -50,7 +50,6 @@ if selected == 'Predict':
             test_img = st.file_uploader("Upload image", type = ['jpg','jpeg','png'])
         elif input_method == 'camera capture':
             test_img = st.camera_input("Capture image")
-
     if test_img:
         infer_dct = {}
         test_img = Image.open(io.BytesIO(test_img.getvalue())).convert('RGB')
@@ -71,6 +70,7 @@ if selected == 'Predict':
             infer_dct = dict(sorted(infer_dct.items(), key=lambda item: item[1]))
             top3_person = list(infer_dct.keys())[:3]
             top3_diff = list(infer_dct.values())[:3]
+            st.text(top3_person)
         
         st.balloons()
         _, you, _ = st.columns((1,1,1))
