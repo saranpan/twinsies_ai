@@ -3,7 +3,7 @@
 
 ![Example](https://github.com/saranpan/twinsies_ai/blob/main/web_image/demo_1.gif?raw=true)
 
-Try this app by yourself : twinsies-ai.streamlit.app
+Try this app by yourself : <a href="https://twinsies-ai.streamlit.app/">twinsies-ai.streamlit.app</a>
 
 A web application that uses state-of-the-art technology to find your celebrity doppelganger. By uploading a photo of yourself (or any persons) or camera capturing, our app uses the MTCNN algorithm to detect and align your facial features, followed by the FaceNet model to extract your face's unique features. We then compare your features to our extensive celebrity database to find the closest match to your appearance. With Twinsies, you can finally uncover which famous face you most closely resemble.
 
