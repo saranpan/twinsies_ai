@@ -8,6 +8,7 @@ from utils import compute_l2_dist, siamese_network, pipeline, get_random_file
 from PIL import Image, UnidentifiedImageError
 import io
 import pickle
+import os
 
 # Read dictionary pkl file (database)
 with open('emb_database/image_tensor.pkl', 'rb') as fp:
