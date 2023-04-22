@@ -35,7 +35,7 @@ selected = option_menu(
 if selected == 'Predict':
     with st.sidebar:
         input_method = st.selectbox('Select Input method', options=['file uploader', 'camera capture'])
-        st.write(img_database)
+        
     st.header('👯 Twinsies AI: Who Do You Look Like in the Celebrity World?')
     st.write("""A web application that uses state-of-the-art technology
             to find your celebrity doppelganger. By uploading a photo of yourself (or any persons) or camera capturing, 
@@ -59,27 +59,19 @@ if selected == 'Predict':
         if face_prob is None: #None if the image is less than threshold
             st.error("No face were detected")
             st.stop()
-        st.text(face_prob)
+            
         with st.spinner('Comparing your face with other celebrity faces ...'): 
             for k, v in img_database.items():
                 diff = test_img_tensor - v
                 dist = torch.linalg.vector_norm(diff,dim=1)
                 dist = torch.mean(dist)
                 infer_dct.update({k : dist.item()})
-                st.write(dist.item())
 
             # Ascending by degree of difference 
             infer_dct = dict(sorted(infer_dct.items(), key=lambda item: item[1]))
-            st.write(len(infer_dct))
             top3_person = list(infer_dct.keys())[:3]
             top3_diff = list(infer_dct.values())[:3]
-            st.text(top3_person)
-            st.text(top3_person)
-            st.text(os.listdir("database"))
-            st.text(os.listdir("database/cardi b"))
-            image = Image.open("database/cardi b/2.jpg")    
-            st.image(image)
-        
+
         st.balloons()
         _, you, _ = st.columns((1,1,1))
         with you:
