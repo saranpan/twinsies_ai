@@ -13,8 +13,7 @@ import os
 # Read dictionary pkl file (database)
 with open('emb_database/image_tensor.pkl', 'rb') as fp:
     img_database = pickle.load(fp)
-
-st.write(img_database)
+    
 # Seuup some stuffs including transforms, and models
 tensor_to_img = T.ToPILImage()
 img_to_tensor = T.ToTensor() # เกบไว้ตอนเชค destination path
@@ -36,7 +35,7 @@ selected = option_menu(
 if selected == 'Predict':
     with st.sidebar:
         input_method = st.selectbox('Select Input method', options=['file uploader', 'camera capture'])
-        
+        st.write(img_database)
     st.header('👯 Twinsies AI: Who Do You Look Like in the Celebrity World?')
     st.write("""A web application that uses state-of-the-art technology
             to find your celebrity doppelganger. By uploading a photo of yourself (or any persons) or camera capturing, 
