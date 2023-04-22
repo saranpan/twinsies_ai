@@ -74,7 +74,7 @@ if selected == 'Predict':
             st.text(os.listdir("database"))
             st.text(os.listdir("database/cardi b"))
             image = Image.open("database/cardi b/2.jpg")    
-            st.image())
+            st.image(image)
         
         st.balloons()
         _, you, _ = st.columns((1,1,1))
