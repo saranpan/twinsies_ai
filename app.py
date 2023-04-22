@@ -108,7 +108,7 @@ if selected == 'Predict':
             st.write(f'Degree of difference : {top3_diff[2]:.2f}')
 
 elif selected == 'Q&A':
-
+    
     with st.expander("Which celebrities are included in our app's collection?"):
         st.write("Our Database contain 28 celebrities, 3 images per celebrities")
         st.image(Image.open('web_image/file_tree.png'))
