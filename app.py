@@ -70,6 +70,7 @@ if selected == 'Predict':
 
             # Ascending by degree of difference 
             infer_dct = dict(sorted(infer_dct.items(), key=lambda item: item[1]))
+            st.write(len(infer_dct))
             top3_person = list(infer_dct.keys())[:3]
             top3_diff = list(infer_dct.values())[:3]
             st.text(top3_person)
