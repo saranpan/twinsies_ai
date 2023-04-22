@@ -117,7 +117,7 @@ elif selected == 'Q&A':
     with st.expander('Can I add more celebrities other than these ?'):
         st.write("""
                 Yes!, Here's the following steps
-                1. Download folder Twinsies from our github repository Twinsie 
+                1. Download folder Twinsies from our github repository Twinsie (Here: https://github.com/saranpan/twinsies_ai)
                 """)
         
         st.image(Image.open('web_image/step1.png'))
