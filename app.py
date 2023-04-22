@@ -112,6 +112,7 @@ elif selected == 'Q&A':
     with st.expander("Which celebrities are included in our app's collection?"):
         st.write("Our Database contain 28 celebrities, 3 images per celebrities")
         st.image(Image.open('web_image/file_tree.png'))
+        st.write(f"Update 22/4/23 : Add the owner images of this app too, so it's 29 person xD")
 
     with st.expander('Can I add more celebrities other than these ?'):
         st.write("""
